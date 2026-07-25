@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mentalist-v1';
+const CACHE_NAME = 'mentalist-v2';
 const FILES = ['./', './index.html', './style.css', './app.js', './manifest.json', './icon.svg'];
 
 self.addEventListener('install', (event) => {
