@@ -31,4 +31,12 @@
   <ellipse cx="100" cy="108" rx="66" ry="15" fill="none" stroke="url(#ringGrad)" stroke-width="6" opacity="0.85" transform="rotate(-14 100 108)"/>
 
   <circle cx="100" cy="100" r="46" fill="url(#planetGrad)"/>
-  <ellipse cx="100" cy="100" rx="46" ry="46" fill="
+  <ellipse cx="100" cy="100" rx="46" ry="46" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <circle cx="82" cy="84" r="7" fill="#ffffff" opacity="0.25"/>
+  <circle cx="112" cy="112" r="5" fill="#3d2a8f" opacity="0.35"/>
+  <circle cx="118" cy="86" r="3.5" fill="#3d2a8f" opacity="0.25"/>
+
+  <ellipse cx="100" cy="108" rx="66" ry="15" fill="none" stroke="url(#ringGrad)" stroke-width="6" opacity="0.55" transform="rotate(-14 100 108)" style="mix-blend-mode:screen"/>
+  <path d="M 34 122 A 66 15 0 0 1 100 108" fill="none" stroke="#0b0c2a" stroke-width="7" opacity="0.9" transform="rotate(-14 100 108)"/>
+</svg>
