@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0b26">
+<title>The Mentalist</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="galaxy-bg"></div>
+<div class="stars"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"><img src="icon.svg" alt=""></span>
+    <div class="brand-text">
+      <span class="brand-name">THE MENTALIST</span>
+      <span class="brand-status" id="statusLine">✦ sistemi pronti</span>
+    </div>
+  </div>
+  <button class="icon-btn" id="settingsBtn" aria-label="Impostazioni">⚙</button>
+</header>
+
+<main class="chat" id="chat">
+  <div class="msg msg-system">
+    <p>Ciao! Sono Cyborg ✦ Scrivi qui sotto oppure tieni premuto il microfono per parlarmi.</p>
+  </div>
+</main>
+
+<footer class="composer">
+  <button class="mic-btn" id="micBtn" aria-label="Parla">
+    <span class="mic-ring"></span>
+    <span class="mic-dot"></span>
+  </button>
+  <textarea id="input" placeholder="Scrivi un messaggio..." rows="1"></textarea>
+  <button class="send-btn" id="sendBtn" aria-label="Invia">→</button>
+</footer>
+
+<!-- Pannello impostazioni -->
+<div class="overlay" id="settingsOverlay">
+  <div class="panel">
+    <div class="panel-head">
+      <span>✦ IMPOSTAZIONI</span>
+      <button class="icon-btn" id="closeSettings">✕</button>
+    </div>
+    <label class="field-label" for="apiKey">Chiave API Anthropic</label>
+    <input type="password" id="apiKey" class="field" placeholder="sk-ant-...">
+    <p class="hint">La chiave resta salvata solo su questo dispositivo, nel browser. Non viene inviata a nessun altro posto se non ad Anthropic per rispondere ai tuoi messaggi.</p>
+    <a class="hint-link" href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">Dove trovo la chiave? →</a>
+
+    <label class="field-label" for="voiceOut">Voce in uscita</label>
+    <select id="voiceOut" class="field">
+      <option value="on">Attiva (Cyborg parla)</option>
+      <option value="off">Disattiva (solo testo)</option>
+    </select>
+
+    <button class="save-btn" id="saveSettings">Salva</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
