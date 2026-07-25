@@ -1,0 +1,66 @@
+:root {
+  --bg-deep: #0a0b26;
+  --bg-mid: #171241;
+  --panel: rgba(29, 24, 70, 0.72);
+  --panel-2: rgba(40, 32, 92, 0.65);
+  --line: rgba(180, 160, 255, 0.18);
+  --pink: #ff7fe0;
+  --cyan: #6fe3ff;
+  --gold: #ffd76f;
+  --violet: #a98bff;
+  --text: #f1eefc;
+  --muted: #a79fd6;
+  --danger: #ff7b8f;
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: 'Nunito', system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Sfondo galassia ---------- */
+.galaxy-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 15%, rgba(255, 127, 224, 0.22), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 20%, rgba(111, 227, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 90%, rgba(169, 139, 255, 0.28), transparent 60%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-mid) 55%, var(--bg-deep));
+}
+
+.stars, .stars::after {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-repeat: repeat;
+  background-image:
+    radial-gradient(1.4px 1.4px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 70px, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 150px 20px, #fff, transparent),
+    radial-gradient(1px 1px at 60px 130px, #ffd76f, transparent),
+    radial-gradient(1.2px 1.2px at 190px 110px, #6fe3ff, transparent),
+    radial-gradient(1px 1px at 220px 40px, #fff, transparent),
+    radial-gradient(1.4px 1.4px at 260px 160px, #fff, transparent),
+    radial-gradient(1px 1px at 30px 190px, #ff7fe0, transparent);
+  background-size: 280px 280px;
+}
+.stars::after {
+  content: '';
+  backgrou
